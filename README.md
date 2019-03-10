@@ -1,40 +1,10 @@
-# TypeScript + Hapi = <3
-
-This is a super simple starter kit to develop APIs with HapiJS + TypeScript
-
-## What currently supports? 
-
-This starter kit comes with the following features: 
-
-- **Swagger-UI** 
-- **Status Monitor**
-- **.env files support**
-- **nodemon for hot-reload**
-- **Pretty Console Logger with Winston** 
-- **Work with Yarn or NPM 6 as dependency resolvers**
-- **Code formatting with Prettier as hook for Pre-commit**
-- **Dockerfile + docker-compose for development**
-- **Basic Test Suite with Tape**
-- **Coverage Report**
-- **Supports Heroku Deployment**
-
-## Requirements
-
-* NodeJS 10.x
-* Yarn 1.x
-
-## How to use it? 
+# TypeScript + Hapi + Vision
 
 1. Download this project as a zip.
-2. Run `yarn install`
+2. Run `npm install`
 3. Run `npm run nodemon:start`
 4. Visit [http://localhost:8080/documentation](http://localhost:8080/documentation) to view swagger docs.
 5. Visit [http://localhost:8080/api/users](http://localhost:8080/api/component/{name}) to test the REST API.
-
-OUTDATED: Now there's a CLI that currently support creating a new project from this repo: [create-typescript-api](https://github.com/BlackBoxVision/create-typescript-api)
-
-
-## TODO
 
 ## Documentation
 
