@@ -4,7 +4,7 @@
 2. Run `npm install`
 3. Run `npm run nodemon:start`
 4. Visit [http://localhost:8080/documentation](http://localhost:8080/documentation) to view swagger docs.
-5. Visit [http://localhost:8080/api/users](http://localhost:8080/api/component/{name}) to test the REST API.
+5. Visit [http://localhost:8080/api/component/{name}](http://localhost:8080/api/component/{name}) to test the REST API.
 
 ## Documentation
 
