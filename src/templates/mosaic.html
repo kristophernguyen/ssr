@@ -3,14 +3,14 @@
     <div class="mosaic-carousel" style="transition-duration: 400ms; transform: translate(0px, 0px) translateZ(0px);">
         {{#each Items}}
         <div class="mosaic-tile photo-portrait" data-index="{{@index}}" data-src="{{Uri}}"
-            style="background-image: url(&quot;{{Uri}}&quot;);"></div>
+            style="background-image: url('{{Uri}}');"></div>
         {{/each}}
     </div>
     <div class="mosaic-carousel-left-arrow mosaic-hide"><span class="mosaic-icon-left"></span></div>
     <div class="mosaic-carousel-right-arrow"><span class="mosaic-icon-right"></span></div>
 </section>
 {{else}}
-<div class="carousel no-photo" carousel @clickHolder>
-    <p><i class="ln-icon-photos-hollow"></i>@Model.NoPhotoText</p>
+<div class="carousel no-photo">
+    <p><i class="ln-icon-photos-hollow"></i>No Photo</p>
 </div>
 {{/if}}
