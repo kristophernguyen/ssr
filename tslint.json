@@ -13,6 +13,7 @@
         "variable-name": false,
         "arrow-parens": false,
         "quotemark": false,
+        "no-console": false,
         "trailing-comma": false,
         "semicolon": [
             true,

@@ -1,7 +1,7 @@
 export default class User {
     
     public _id: string;
-    public age: Number;
+    public age: number;
     public name: string;
     public lastName: string;
 

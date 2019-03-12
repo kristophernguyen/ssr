@@ -1,12 +1,11 @@
 {
   "author": "BlackBox Vision",
   "contributors": [
-    "Jonatan E. Salas <jonatansalas@live.com.ar>",
-    "Lauri Larjo <laurilarjo@gmail.com>"
+    "KristopherNguyen@gmail.com"
   ],
-  "description": "Starter for building APIs with Hapi + Typescript!",
+  "description": "Hapi + Typescript + Vision",
   "license": "MIT",
-  "name": "typescript-hapi-starter",
+  "name": "typescript-hapi-vision",
   "version": "1.0.0",
   "engines": {
     "node": ">=10.0"
@@ -14,6 +13,7 @@
   "scripts": {
     "build-ts": "tsc",
     "start": "node dist/src/index.js",
+    "debug": "nodemon --inspect dist/src/",
     "docker:logs": "docker-compose logs",
     "docker:ps": "docker-compose ps",
     "docker:start": "docker-compose up",
