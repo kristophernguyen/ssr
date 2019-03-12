@@ -1,18 +1,14 @@
 {{#if Items.length}}
-<div class="carousel" carousel data-slide-clicked-event="@Model.SlideClickedEvent" data-go-to-slide-event="@Model.GoToSlideEvent" @clickHolder data-carousal-name="@Model.CarousalName" data-profile-url="">
-    <div class="row carousel-view">
-        <div class="column-12 carousel-preview noselect">
-            <div class="photo-overlay-container single-slide"></div>
-            <div class="carousel-inner">
-                <div class="slide active" slide data-slide-index="0" data-slide-use-magnify="" track-click="">
-                    {{#each Items}}
-                       Img Src {{Uri}}
-                    {{/each}}
-                </div>
-            </div>
-        </div>
+<section class="mosaic-carousel-container" id="mosaic-lplplll">
+    <div class="mosaic-carousel" style="transition-duration: 400ms; transform: translate(0px, 0px) translateZ(0px);">
+        {{#each Items}}
+        <div class="mosaic-tile photo-portrait" data-index="{{@index}}" data-src="{{Uri}}"
+            style="background-image: url(&quot;{{Uri}}&quot;);"></div>
+        {{/each}}
     </div>
-</div>
+    <div class="mosaic-carousel-left-arrow mosaic-hide"><span class="mosaic-icon-left"></span></div>
+    <div class="mosaic-carousel-right-arrow"><span class="mosaic-icon-right"></span></div>
+</section>
 {{else}}
 <div class="carousel no-photo" carousel @clickHolder>
     <p><i class="ln-icon-photos-hollow"></i>@Model.NoPhotoText</p>

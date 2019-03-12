@@ -1,6 +1,6 @@
-import { AttachmentItem } from "./attachmentitem";
+import { IAttachmentItem } from "./attachmentitem";
 
-export interface Attachment {
+export interface IAttachment {
     EntityType: number;
-    Items:      AttachmentItem[];
+    Items: IAttachmentItem[];
 }

@@ -1,8 +1,8 @@
-export interface ExternalReferences {
-    Items: ExternalReferencesItem[];
+export interface IExternalReferences {
+    Items: IExternalReferencesItem[];
 }
-export interface ExternalReferencesItem {
-    Key:                   string;
-    Uri:                   string;
+export interface IExternalReferencesItem {
+    Key: string;
+    Uri: string;
     ExternalReferenceType: number;
 }

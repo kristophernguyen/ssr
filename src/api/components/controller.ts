@@ -1,10 +1,10 @@
 import * as rm from 'typed-rest-client';
 import * as dotenv from 'dotenv';
 import MosaicService from '../../mosaic/mosaic-service';
-import { Attachment } from '../../model/attachment';
+import { IAttachment } from "../../model/Attachment";
 import { Request } from 'hapi';
 import { AttachmentType } from '../../model/attachmenttype';
-import { AttachmentItem } from '../../model/attachmentitem';
+import { IAttachmentItem } from '../../model/attachmentitem';
 export default class ComponentController {
     constructor() {
         dotenv.config();
@@ -13,7 +13,7 @@ export default class ComponentController {
         const viewName = request.params.name;
         return reply.view(viewName);
     }
-    public async getMosaic(request: Request, reply: any): Promise<Attachment | null> {
+    public async getMosaic(request: Request, reply: any): Promise<IAttachment | null> {
         const listingIdStr = request.params.listingId;
         const listingId = parseInt(listingIdStr, 10);
         const deviceType = request.params.deviceType;
@@ -35,14 +35,14 @@ export default class ComponentController {
     //         }
     //     }
     // }
-    private is3dTour(item: AttachmentItem): boolean {
+    private is3dTour(item: IAttachmentItem): boolean {
         let result = false;
         if (item.AttachmentType === AttachmentType.ThreeDimensionalScan) {
             result = true;
         }
         return result;
     }
-    private isVideo(item: AttachmentItem): boolean {
+    private isVideo(item: IAttachmentItem): boolean {
         let result = false;
         if (item.AttachmentType === AttachmentType.CommercialListingVideo || 
             item.AttachmentType === AttachmentType.ProVideoLoopNet ||

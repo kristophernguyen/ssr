@@ -1,7 +1,7 @@
 import * as rm from 'typed-rest-client';
 import Logger from '../helper/logger';
-import { Attachment } from '../model/attachment';
-import { AttachmentRequest } from '../model/AttachmentRquest';
+import { IAttachment } from "../model/Attachment";
+import { IAttachmentRequest } from '../model/AttachmentRquest';
 import { ImageSize } from '../model/imagesize';
 
 export default class MosaicService {
@@ -9,9 +9,9 @@ export default class MosaicService {
     constructor(pdsRestClient: rm.RestClient) {
         this._pdsRestClient = pdsRestClient;
     }
-    public getAttachment = async (listingId: number): Promise<Attachment | null> => {
+    public getAttachment = async (listingId: number): Promise<IAttachment | null> => {
         try {
-            const pdsRequest = {} as AttachmentRequest;
+            const pdsRequest = {} as IAttachmentRequest;
             pdsRequest.Ids = [];
             pdsRequest.Size = [];
             pdsRequest.Attachments = [
@@ -20,8 +20,8 @@ export default class MosaicService {
             pdsRequest.Ids.push(listingId);
             pdsRequest.Size.push(ImageSize.HighDefinition);
 
-            const restRes: rm.IRestResponse<Attachment> = 
-            await this._pdsRestClient.create<Attachment>('/listing/attachments', pdsRequest);
+            const restRes: rm.IRestResponse<IAttachment> = 
+            await this._pdsRestClient.create<IAttachment>('/listing/attachments', pdsRequest);
             return restRes.result;
         } catch (error) {
             Logger.info(`POST - getAttachment` + error);
