@@ -12,7 +12,7 @@ export default class User {
         this.lastName = "Smith";
     }
 
-    toString() {
+    public toString() {
         return `UserID: ${this._id}, Age: ${this.age}, Name: ${this.name}, LastName: ${this.lastName}`;
     }
 }
