@@ -1,4 +1,4 @@
-export enum AttachmentType{
+export enum AttachmentType {
     Unknown = 0,
     Aerial = 1,
     Financial = 2,
@@ -62,12 +62,12 @@ export enum AttachmentType{
     ShortUavVideo = 60,
     PlacardLogoVector= 61,
     CoStarPlaneView = 62,
-    DesktopCoverPhotoResidential=63,
-    PlacardHighlightPhoto=64,
+    DesktopCoverPhotoResidential= 63,
+    PlacardHighlightPhoto= 64,
     PlacardHighlightVideo = 65,
-    AmenityPhoto=66,
-    AmenityVideo=67,
-    MobileCoverPhotoResidential=68,
-    DesktopCoverPhotoCommercial=69,
+    AmenityPhoto= 66,
+    AmenityVideo= 67,
+    MobileCoverPhotoResidential= 68,
+    DesktopCoverPhotoCommercial= 69,
     MobileCoverPhotoCommercial = 70
 }

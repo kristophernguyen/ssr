@@ -27,7 +27,7 @@ export default class ComponentRoutes implements IRoute {
                     options: {
                         handler: controller.getMosaic,
                         validate: validate.getMosaic,
-                        description: 'getting component by name',
+                        description: 'getting mosaic component',
                         tags: ['api', 'components'],
                         auth: false,
                     },
