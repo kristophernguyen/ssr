@@ -1,6 +1,5 @@
 import IRoute from '../../helper/route';
 import Logger from '../../helper/logger';
-import { Request } from 'hapi';
 import validate from './validate';
 import ComponentController from './controller';
 
