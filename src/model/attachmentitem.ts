@@ -1,7 +1,7 @@
 import { EntityType } from "./entitytype";
 import { ImageSize } from "./imagesize";
 import {AttachmentType} from "./attachmenttype";
-import { ExternalReferences } from "./externalreference";
+import { IExternalReferences } from "./externalreference";
 
 export interface IAttachmentItem {
     AttachmentMasterId: number;
@@ -15,7 +15,7 @@ export interface IAttachmentItem {
     MasterHeight: number;
     Size: ImageSize;
     RequestedSize: number;
-    ExternalReferences: ExternalReferences;
+    ExternalReferences: IExternalReferences;
     Uri: string;
     ContentType: string;
     AttachmentType: AttachmentType;
